@@ -215,12 +215,10 @@ public class UserInterface {
 
     private void viewAllGroupedOrders() {
         shop.showOrdersByStatus();
-        System.out.println("Wyświetl zamówienia pogrupowane według statusu");
     }
 
     private void showStatistics() {
         shop.showStatistics();
-        System.out.println("Wyświetl statystyki zamówień");
     }
 
     private void saveToFile() throws IOException {

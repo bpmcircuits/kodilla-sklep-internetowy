@@ -60,9 +60,8 @@ public class Shop implements Serializable {
         System.out.printf("- Łączna liczba zamówień: %d %n", sumOfOrders);
         System.out.printf("- Suma wartości zamówień: %.2f %n", sumOfAmount);
         System.out.println("- Liczba zamówień w podziale na statusy:");
-        orderCountByStatus.forEach(((orderStatus, amount) ->
-                System.out.println(orderStatus + ": " + amount)));
+        orderCountByStatus.entrySet().stream()
+                .sorted(Map.Entry.<OrderStatus, Long>comparingByValue().reversed())
+                .forEach(entry -> System.out.println(entry.getKey() + ": " + entry.getValue()));
     }
-
-
 }
