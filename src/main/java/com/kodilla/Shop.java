@@ -24,7 +24,6 @@ public class Shop implements Serializable {
     public boolean deleteOrder(int id) {
         if (!orderList.isEmpty() && orderList.get(id) != null) {
             orderList.remove(id);
-            System.out.println("Usunięto!!!");
             return true;
         } else return false;
     }
