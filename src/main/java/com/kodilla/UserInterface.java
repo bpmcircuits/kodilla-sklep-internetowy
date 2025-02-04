@@ -206,7 +206,11 @@ public class UserInterface {
 
     private void deleteOrder() {
         System.out.println("Usuń zamówienie ID: ");
-        shop.deleteOrder(provideIDNumber());
+        if (shop.deleteOrder(provideIDNumber())) {
+            System.out.println("Usunięto zamówienie!");
+        } else {
+            System.out.println("Coś poszło nie tak...");
+        }
     }
 
     private void viewAllGroupedOrders() {

@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class Shop implements Serializable {
 
-    private Map<Integer, Order> orderList = new HashMap<>();
+    private final Map<Integer, Order> orderList = new HashMap<>();
 
     public void addNewOrder(Order order) {
         orderList.put(order.getId(), order);
